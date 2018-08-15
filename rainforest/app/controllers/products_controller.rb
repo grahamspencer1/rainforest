@@ -33,6 +33,8 @@ class ProductsController < ApplicationController
     @product.name = params[:product][:name]
     @product.description = params[:product][:description]
     @product.price = params[:product][:price]
+    flash[:alert] = "You have successfully updated this product."
+
     if @product.save
       redirect_to product_url(params[:id])
     else
@@ -43,6 +45,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
+    flash[:notice] = "You have successfully deleted this product."
     redirect_to products_url
   end
 
