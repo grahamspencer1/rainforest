@@ -2,6 +2,6 @@
 
 
 <% @products.each do |product| %>
-  <%= link_to product.name, product_path(product) %><hr>
+  <%= link_to product.name, product_path(product) %> - <%= product.price_in_dollars%><hr>
 
 <% end %>
