@@ -2,9 +2,11 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new
-    @review.comment = params[:product][:comment]
+    @product = Product.find(params[:product_id])
+    @review.product_id = params[:product_id]
+    @review.comment = params[:review][:comment]
     if @review.save
-      redirect_to product_url
+      redirect_to product_url(@product)
     end
   end
 
@@ -14,7 +16,7 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
-    @review.comment = params[:product][:comment]
+    @review.comment = params[:review][:comment]
     if @review.save
       redirect_to product_url
     end
