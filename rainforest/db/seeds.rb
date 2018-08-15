@@ -3,5 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Product.create([{ name: "iPod", description: "Outdated music player, but what a bargain!", price: 9999}])
+
+Product.create([{ name: "iPhone", description: "Everyone loves them! A little on the pricy side though...", price: 99999}])
+
+Product.create([{ name: "iWatch", description: "No one wants them AND they're expensive! But if you want one that's cool.", price: 999999}])
