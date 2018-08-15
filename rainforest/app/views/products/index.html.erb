@@ -2,10 +2,9 @@
 
 
 
-# New Product
 
 
+<% @products.each do |product| %>
+  <%= link_to product.name, product_path(product) %><hr>
 
-# List of products
-
-<%= @product.name %>
+<% end %>
