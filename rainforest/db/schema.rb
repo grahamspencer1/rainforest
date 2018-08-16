@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_213743) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "comment"
-    t.datetime "created_at", null: false
+    t.datetime "created_at", null: true
     t.datetime "updated_at", null: false
     t.integer "product_id"
   end

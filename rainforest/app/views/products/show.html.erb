@@ -15,6 +15,6 @@
 
 <% @product.reviews.each do |r| %>
   <ul>
-    <li> <%= r.comment %> | <%= link_to "Edit", edit_product_review_path(@product.id, r.id) %> </li>
+    <li> <strong><%= r.comment %></strong> <br> <%= r.created_at %> <br> <%= link_to "Edit", edit_product_review_path(@product.id, r.id) %> </li>
   </ul>
 <% end %>
