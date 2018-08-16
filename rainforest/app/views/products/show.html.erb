@@ -9,4 +9,12 @@
 
 <h4>New Review</h4>
 
-<p><%= render "reviews/review" %></p>
+<%= render "reviews/review" %>
+
+<h4>Other Reviews</h4>
+
+<% @product.reviews.each do |r| %>
+  <ul>
+    <li> <%= r.comment %> | <%= link_to "Edit", edit_product_review_path(@product.id, r.id) %> </li>
+  </ul>
+<% end %>

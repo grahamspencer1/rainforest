@@ -34,10 +34,10 @@ class ProductsController < ApplicationController
     @product.name = params[:product][:name]
     @product.description = params[:product][:description]
     @product.price = params[:product][:price]
-    flash[:alert] = "You have successfully updated this product."
 
     if @product.save
       redirect_to product_url(params[:id])
+      flash[:alert] = "You have successfully updated this product."
     else
       render :edit
     end
